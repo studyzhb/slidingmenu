@@ -1,16 +1,22 @@
 package com.coolshow.slidingmenu;
 
+import com.coolshow.slidingmenu.view.SlidingMenu;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 
 public class MainActivity extends Activity {
-
+	private SlidingMenu mSlidingMenu;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
+		mSlidingMenu=(SlidingMenu) findViewById(R.id.menu_id);
 	}
 
 	@Override
@@ -19,7 +25,9 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	public void toogleMenu(View view){
+		mSlidingMenu.toggle();
+	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

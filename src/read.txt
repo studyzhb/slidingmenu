@@ -1,2 +1,2 @@
-mMenu.setTranslationX(l);¼æÈİµ½3.0£¬
-»òÕßViewHelper.setTransklationX(mMenu, l)£»¼æÈİµ½2.0£¬//³éÌë
+mMenu.setTranslationX(l);å…¼å®¹åˆ°3.0ï¼Œ
+æˆ–è€…ViewHelper.setTransklationX(mMenu, l)ï¼›å…¼å®¹åˆ°2.0ï¼Œ//æŠ½å±‰
