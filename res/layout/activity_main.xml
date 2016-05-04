@@ -8,29 +8,52 @@
     <com.coolshow.slidingmenu.view.SlidingMenu
         android:id="@+id/menu_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" 
-        zhang:rightPadding="150dp">
+        android:layout_height="match_parent"
+        zhang:rightPadding="150dp" >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal" >
 
-            <include layout="@layout/menu_sliding" />
+            <LinearLayout
+                android:id="@+id/left_menu_leftlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/leftmenu_listview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                   
+                </ListView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/qq" >
-                <Button 
+                android:background="@drawable/main_bg"
+                android:orientation="vertical" >
+
+                <Button
                     android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="toogleMenu"
-                android:text="切换菜单"
-                    />
+                    android:layout_height="wrap_content"
+                    android:onClick="toogleMenu"
+                    android:text="切换菜单" />
+
+                <include layout="@layout/top" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/id_viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+                </android.support.v4.view.ViewPager>
+
+                <include layout="@layout/bottom" />
             </LinearLayout>
         </LinearLayout>
-
     </com.coolshow.slidingmenu.view.SlidingMenu>
 
 </RelativeLayout>
